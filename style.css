@@ -4,13 +4,96 @@
   box-sizing: border-box;
 }
 
+header,
+nav,
+footer {
+  grid-column: 1 / -1;
+  background: blue;
+}
+
+/* Nav stuff */
+
+nav .logo {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
+  letter-spacing: 10px;
+  font-family: Montserrat, Roboto, Helvetica, san-serif;
+}
+
+nav .logo a {
+  text-decoration: none;
+  color: black;
+}
+
+nav .logo:hover {
+  animation-name: bounce;
+  animation-duration: 1s;
+}
+
+nav ul li:hover {
+  animation-name: bounce2;
+  animation-duration: 1s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce2 {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes slide-up-fade-in {
+  0% {
+    opacity: 0.5;
+    transform: translate(0px, 190px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+nav ul {
+  text-align: center;
+  list-style: none;
+  padding-top: 10px;
+  padding-right: 30px;
+  font-family: Montserrat, Roboto, Helvetica, san-serif;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  line-height: 50px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
 body {
   padding: 2rem;
+  background-color: lightsalmon;
 }
 
 main {
   max-width: 500px;
   margin: 0 auto;
+  background-color: grey;
 }
 
 article {
@@ -35,7 +118,7 @@ article {
     /* Don't add more columns than theres is content for. && +content "always" take full width */
     grid-gap: 1rem;
   }
-} /* END @supports grid */
+}
 
 article {
   display: flex;
@@ -70,7 +153,7 @@ article > p {
 }
 
 main {
-  font-family: Avenir, Roboto, Helvetica, san-serif;
+  font-family: Montserrat, Roboto, Helvetica, san-serif;
   font-size: 80%;
 }
 
