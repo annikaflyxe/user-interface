@@ -10,6 +10,10 @@ footer {
   grid-column: 1 / -1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Nav stuff */
 
 nav .logo {
